@@ -9,7 +9,7 @@ namespace TestProject1
     [TestFixture]
     public class TestCalculator
     {
-        IWebDriver driver;
+        IWebDriver? driver;
         IWebElement textBoxFirstNum;
         IWebElement textBoxSecondNum;
         IWebElement dropDownOperation;
@@ -35,7 +35,7 @@ namespace TestProject1
         [OneTimeTearDown]
         public void TearDown()
         {
-            driver.Quit();
+            driver?.Quit();
         }
 
         public void PerformCalculation(string firstNumber, string operation,

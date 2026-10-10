@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Clean previous build outputs') {
+            steps {
+                bat 'dotnet clean'
+            }
+        }
+
         stage('Restore the project') {
             steps {
                 bat 'dotnet restore'
